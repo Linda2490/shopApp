@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-
+import { words } from './StaticWords.js'
 import './App.css'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="layout">
         <Header />
-        <main>content</main>
+        <main>{words.content}</main>
         <Footer />
       </div>
     </Router>

@@ -1,9 +1,10 @@
 import React from 'react';
 import '../../css/Footer/Footer.css'
+import { words } from '../../StaticWords.js'
 export default function Footer() {
   return (
       <footer>
-      &copy; ShopApp copywright 2022
+     {words.footerTitle}
       
       </footer>);
 }

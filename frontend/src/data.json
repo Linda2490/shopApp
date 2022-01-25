@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "title": "product_1",
+    "desc": "this is product 1",
+    "price": "2dt",
+    "type": ["emballage", "sabba"],
+    "image": "/images/omo.jpg"
+  },
+  {
+    "id": "2",
+    "title": "product_2",
+    "desc": "this is product 2",
+    "price": "0.8dt",
+    "type": ["simple", "zit-zitouna"],
+    "image": "/images/savon.jpg"
+  },
+  {
+    "id": "3",
+    "title": "product_3",
+    "desc": "this is product 3",
+    "price": "0.3dt",
+    "type": ["pack", "bil-ka3ba"],
+    "image": "/images/eponge.jpg"
+  },
+  {
+    "id": "4",
+    "title": "product_4",
+    "desc": "this is product 4",
+    "price": "1.5dt",
+    "type": ["bouteille", "sabba"],
+    "image": "/images/javel.jpg"
+  }
+]
