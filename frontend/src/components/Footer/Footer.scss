@@ -1,0 +1,15 @@
+footer {
+  grid-area: footer;
+  background-image: linear-gradient(
+    to right,
+    rgb(204, 0, 255),
+    rgb(255, 0, 128),
+    rgb(204, 0, 255)
+  );
+
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  color: aliceblue;
+}

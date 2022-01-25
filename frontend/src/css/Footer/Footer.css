@@ -1,0 +1,9 @@
+footer {
+  grid-area: footer;
+  background-image: linear-gradient(to right, #cc00ff, #ff0080, #cc00ff);
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  color: aliceblue;
+}
