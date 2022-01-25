@@ -1,0 +1,9 @@
+header {
+  grid-area: header;
+  background-image: linear-gradient(to right, #cc00ff, #ff0080, #cc00ff);
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  color: aliceblue;
+  align-items: center;
+}
