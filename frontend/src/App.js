@@ -7,7 +7,7 @@ import Header from './components/Header/Header'
 import Products from './components/Products/Products'
 import data from './data.json'
 function App() {
- const [products, useProducts] = useState(data)
+ const [products, setProducts] = useState(data)
  
   return (
     <Router>
