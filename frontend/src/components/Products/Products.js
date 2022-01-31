@@ -18,7 +18,7 @@ export default function Products(props) {
            
             <div className="product-description">
               <p>{product.title}</p>
-              <span>{product.price}</span>
+              <span>{product.price}dt</span>
             
             </div>
             <button> add to cart </button>
