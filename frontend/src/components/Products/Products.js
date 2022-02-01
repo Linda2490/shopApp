@@ -21,7 +21,7 @@ export default function Products(props) {
               <span>{product.price}dt</span>
             
             </div>
-            <button> add to cart </button>
+            <button onClick={() => {props.addToCart(product)}}> add to cart </button>
         
     
     
