@@ -4,7 +4,7 @@ export default function Filter(props) {
   return (
     <div className="filter-wrapper">
       <h2 className="filter-title">filter</h2>
-      <div className="number-of-products"> number of produts is 4</div>
+      <div className="number-of-products"> number of produts is {props.productsNumber}</div>
       <div className="filter-by-type">
         <span>Filter</span>
         <select value={props.type} className="filter-select" onChange={props.handleType}>
