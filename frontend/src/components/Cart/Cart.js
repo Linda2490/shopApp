@@ -1,6 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../../css/Cart/Cart.css'
+import Form from '../Form/Form'
 export default function Cart(props) {
+  const [showForm, setShowForm] = useState(false)
+  const [value, setValue] = useState('')
+  const onSubmitHundle = (e) => {
+    e.preventDefault()
+    console.log(value);
+    const order = {
+      name: value.name,
+      email: value.email
+    }
+  }
+  const hundleChange = (e) => {
+      setValue((prevState) => ({...prevState, [e.target.name]: e.target.value}))
+  }
+
   return (
     <div className="cart-wrapper">
       <div className="cart-title">
@@ -38,13 +53,16 @@ export default function Cart(props) {
           <div className="total">
             Total :{' '}
             {props.cartItems.reduce((acc, p) => {
-              return acc + p.price
+              return acc + (p.price * p.qty)
             }, 0)}
             dt
           </div>
-          <button>select products</button>
+          <button onClick={() => setShowForm(true)}>select products</button>
         </div>
       )}
+       
+      <Form showForm={showForm} setShowForm={setShowForm} hundleChange={hundleChange} onSubmitHundle={onSubmitHundle} />
+
     </div>
   )
 }
