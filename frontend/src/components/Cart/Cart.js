@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import '../../css/Cart/Cart.css'
 import Form from '../Form/Form'
+import Fade from 'react-reveal/Fade'
+import Bounce from 'react-reveal/Bounce'
 export default function Cart(props) {
   const [showForm, setShowForm] = useState(false)
   const [value, setValue] = useState('')
@@ -17,6 +19,7 @@ export default function Cart(props) {
   }
 
   return (
+    <Fade left>
     <div className="cart-wrapper">
       <div className="cart-title">
         {' '}
@@ -26,8 +29,10 @@ export default function Cart(props) {
           <p>There are {props.cartItems.length} in cart </p>
         )}{' '}
       </div>
+       
       <div className="cart-items">
         {props.cartItems.map((item) => (
+          <Bounce left>
           <div className="cart-item" key={item.id}>
             <img src={item.image} alt={item.title} />
             <div className="cart-info">
@@ -46,8 +51,10 @@ export default function Cart(props) {
               </button>
             </div>
           </div>
+           </Bounce>
         ))}
       </div>
+      
       {props.cartItems.lengh !== 0 && (
         <div className="cart-footer">
           <div className="total">
@@ -64,5 +71,7 @@ export default function Cart(props) {
       <Form showForm={showForm} setShowForm={setShowForm} hundleChange={hundleChange} onSubmitHundle={onSubmitHundle} />
 
     </div>
+    </Fade>
   )
+  
 }

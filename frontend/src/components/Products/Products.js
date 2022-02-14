@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import '../../css/Products/Products.css'
-
+import Fade from 'react-reveal/Fade'
 import ProductModal from './ProductModal.js'
 export default function Products(props) {
   const [product, setProduct] = useState("")
@@ -10,7 +10,10 @@ export default function Products(props) {
   const closeModal = () => {
     setProduct(false)
   }
-  return <div className="products-wrapper">
+  return (
+  <Fade left cascade>
+  
+  <div className="products-wrapper">
   {props.products.map(product => (
     <div className="product-item" key={product.id}>
             
@@ -31,4 +34,5 @@ export default function Products(props) {
 
   <ProductModal product={product} closeModal={closeModal}></ProductModal>
   </div>
-}
+  </Fade>
+  )}
