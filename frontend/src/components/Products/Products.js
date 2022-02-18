@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import '../../css/Products/Products.css'
 import Fade from 'react-reveal/Fade'
 import ProductModal from './ProductModal.js'
-export default function Products(props) {
+import { connect } from 'react-redux'
+import { fetchProducts } from '../../store/actions/products'
+function Products(props) {
   const [product, setProduct] = useState("")
   const openModal = (product) => {
     setProduct(product)
@@ -10,11 +12,14 @@ export default function Products(props) {
   const closeModal = () => {
     setProduct(false)
   }
+  useEffect(()=>{
+    props.fetchProducts()
+  }, [])
   return (
   <Fade left cascade>
   
   <div className="products-wrapper">
-  {props.products.map(product => (
+  {props.products && props.products.length ? props.products.map(product => (
     <div className="product-item" key={product.id}>
             
             <img src={product.image} alt={product.title} onClick={() => openModal(product)}/>
@@ -30,9 +35,16 @@ export default function Products(props) {
     
     </div>
 
-  ))}
+  )):"loading ..."}
 
   <ProductModal product={product} closeModal={closeModal}></ProductModal>
   </div>
   </Fade>
   )}
+
+export default connect(
+  (state) => { 
+    return {products : state.products.products}
+  }, { fetchProducts }
+)(Products)
+

@@ -9,10 +9,10 @@ export default function Cart(props) {
   const onSubmitHundle = (e) => {
     e.preventDefault()
     console.log(value);
-    const order = {
-      name: value.name,
-      email: value.email
-    }
+    // const order = {
+    //   name: value.name,
+    //   email: value.email
+    // }
   }
   const hundleChange = (e) => {
       setValue((prevState) => ({...prevState, [e.target.name]: e.target.value}))

@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from '../input/Input'
 import '../../css/Form/Form.css'
-import Zoom from 'react-reveal/Zoom'
+
 export default function Form(props) {
   return <>
    {props.showForm && 

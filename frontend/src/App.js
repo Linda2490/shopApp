@@ -8,6 +8,8 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Products from './components/Products/Products'
 import data from './data.json'
+import { Provider } from 'react-redux'
+import store from './store/Store'
 function App() {
   const [products, setProducts] = useState(data)
   const [type, setType] = useState('')
@@ -70,6 +72,7 @@ function App() {
   
   
   return (
+    <Provider store={store}>
     <Router>
       <div className="layout">
         <Header />
@@ -89,6 +92,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </Provider>
   )
 }
 
