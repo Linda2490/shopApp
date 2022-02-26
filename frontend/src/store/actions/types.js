@@ -1,1 +1,3 @@
 export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
+export const FILTER_TYPE = "FILTER_TYPE";
+export const FILTER_SORT = "FILTER_SORT";

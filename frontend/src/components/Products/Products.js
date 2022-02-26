@@ -44,7 +44,7 @@ function Products(props) {
 
 export default connect(
   (state) => { 
-    return {products : state.products.products}
+    return {products : state.products.filtredProducts}
   }, { fetchProducts }
 )(Products)
 
