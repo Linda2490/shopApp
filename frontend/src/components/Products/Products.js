@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade'
 import ProductModal from './ProductModal.js'
 import { connect } from 'react-redux'
 import { fetchProducts } from '../../store/actions/products'
+import { addToCart } from '../../store/actions/cart'
 function Products(props) {
   const [product, setProduct] = useState("")
   const openModal = (product) => {
@@ -45,6 +46,6 @@ function Products(props) {
 export default connect(
   (state) => { 
     return {products : state.products.filtredProducts}
-  }, { fetchProducts }
+  }, { fetchProducts, addToCart }
 )(Products)
 

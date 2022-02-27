@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 // import { words } from './StaticWords.js'
 import './App.css'
@@ -66,9 +66,9 @@ function App() {
     const cartItemsClone = [...cartItems];
     setcartItems(cartItemsClone.filter(p => p.id !== product.id))
   }
-  useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems))
-  }, [cartItems]);
+  // useEffect(() => {
+  //   localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  // }, [cartItems]);
   
   
   return (

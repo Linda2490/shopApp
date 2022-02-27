@@ -3,7 +3,9 @@ import '../../css/Cart/Cart.css'
 import Form from '../Form/Form'
 import Fade from 'react-reveal/Fade'
 import Bounce from 'react-reveal/Bounce'
-export default function Cart(props) {
+import { connect } from 'react-redux'
+import { removeFromCart } from '../../store/actions/cart'
+function Cart(props) {
   const [showForm, setShowForm] = useState(false)
   const [value, setValue] = useState('')
   const onSubmitHundle = (e) => {
@@ -44,7 +46,7 @@ export default function Cart(props) {
 
               <button
                 onClick={() => {
-                  props.removeProduct(item)
+                  props.removeFromCart(item)
                 }}
               >
                 Remove
@@ -75,3 +77,7 @@ export default function Cart(props) {
   )
   
 }
+export default connect((state) => {
+  return {
+    cartItems: state.cart.cartItems  }
+},{removeFromCart})(Cart)
