@@ -46,3 +46,33 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.order-info .close-icon {
+  right: 3px;
+  top: 3px;
+}
+.order-info .alert-success {
+  background-image: linear-gradient(to right, #cc00ff, #ff0080, #cc00ff);
+  padding: 10px;
+  text-align: center;
+  color: aliceblue;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.order-info table {
+  border: 1px solid #c0c0c0;
+}
+.order-info table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c0c0c0;
+}
+.order-info table tr:last-of-type {
+  border-bottom: 0;
+}
